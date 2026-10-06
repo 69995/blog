@@ -38,6 +38,10 @@ Dir.children(src).sort_by { |n| n.sub(/\.(md|markdown|txt)\z/, "") }.each do |na
   end
   title = title.to_s.strip.sub(/\A["'](.*)["']\z/, '\1')
 
+  # ../image/ で書いた写真・動画のパスを、公開サイト用（/blog/image/）に直す
+  # （GitHubのプレビューでも公開サイトでも表示されるように）
+  text = text.gsub(%r{(\]\(|src=["'])\.\./image/}) { "#{$1}/blog/image/" }
+
   ymd = "#{y[2..]}#{mo}#{d}"
   used[ymd] += 1
   slug = used[ymd] == 1 ? ymd : "#{ymd}-#{used[ymd]}"
