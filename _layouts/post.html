@@ -3,7 +3,7 @@ layout: default
 ---
 <div class="stream">
   <article class="post">
-    <h1 class="post-title">{{ page.date | date: "%y%m%d" }}-{{ page.title }}</h1>
+    <h1 class="post-title">{{ page.headline | default: page.title }}</h1>
     <div class="post-body">
 {{ content }}
     </div>
