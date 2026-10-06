@@ -1,0 +1,33 @@
+---
+layout: default
+---
+<div class="stream">
+  {% for post in paginator.posts %}
+  <section class="post">
+    <h2 class="post-title"><a href="{{ post.url | relative_url }}">{{ post.date | date: "%y%m%d" }}-{{ post.title }}</a></h2>
+    <div class="post-body">
+{{ post.content }}
+    </div>
+  </section>
+  {% endfor %}
+
+  {% if paginator.total_pages > 1 %}
+  <nav class="pager" aria-label="ページ送り">
+    <div class="nums">
+      {% for n in (1..paginator.total_pages) %}
+        {% if n == paginator.page %}
+          <span class="cur" aria-current="page">{{ n }}</span>
+        {% elsif n == 1 %}
+          <a href="{{ '/' | relative_url }}">{{ n }}</a>
+        {% else %}
+          <a href="{{ site.paginate_path | replace: ':num', n | relative_url }}">{{ n }}</a>
+        {% endif %}
+      {% endfor %}
+    </div>
+    <div class="nums">
+      {% if paginator.previous_page %}<a href="{{ paginator.previous_page_path | relative_url }}">← 前のページ</a>{% endif %}
+      {% if paginator.next_page %}<a href="{{ paginator.next_page_path | relative_url }}">次のページ →</a>{% endif %}
+    </div>
+  </nav>
+  {% endif %}
+</div>
