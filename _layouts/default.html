@@ -6,28 +6,12 @@
 <title>{% if page.headline %}{{ page.headline }} | {% endif %}{{ site.title }}</title>
 <link rel="preload" href="https://cdn.jsdelivr.net/npm/@fontpkg/jf-dot-shinonome-gothic-12@1.0.20150527/JF-Dot-Shinonome12.ttf" as="font" type="font/ttf" crossorigin>
 <link rel="stylesheet" href="{{ '/assets/style.css' | relative_url }}?v={{ site.time | date: '%s' }}">
-<script>try{if(localStorage.getItem("theme")==="dark")document.documentElement.dataset.theme="dark"}catch(e){}</script>
 </head>
 <body>
 <div class="page">
   <main>
 {{ content }}
   </main>
-  <footer class="site-foot">
-    <button class="theme-toggle" id="theme-toggle" type="button"></button>
-  </footer>
 </div>
-<script>
-(function(){
-  var b=document.getElementById("theme-toggle"),r=document.documentElement;
-  function label(){b.textContent=r.dataset.theme==="dark"?"□ ライトモードにする":"■ ダークモードにする"}
-  b.addEventListener("click",function(){
-    if(r.dataset.theme==="dark"){delete r.dataset.theme;try{localStorage.removeItem("theme")}catch(e){}}
-    else{r.dataset.theme="dark";try{localStorage.setItem("theme","dark")}catch(e){}}
-    label();
-  });
-  label();
-})();
-</script>
 </body>
 </html>
