@@ -13,7 +13,7 @@
 *{box-sizing:border-box}
 ::selection{background:var(--ink);color:var(--bg)}
 html{-webkit-text-size-adjust:100%}
-body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--f-body);font-size:12px;line-height:18px;
+body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--f-body);font-size:14px;line-height:24px;
   padding-inline:clamp(16px,4vw,40px)}
 a{color:inherit;text-underline-offset:2px}
 :focus-visible{outline:2px solid var(--ink);outline-offset:3px}
@@ -28,24 +28,24 @@ a{color:inherit;text-underline-offset:2px}
 .post-title a{text-decoration:none}
 .post-title a:hover{text-decoration:underline;text-decoration-thickness:.06em;text-underline-offset:.12em}
 .post-body{max-width:40.6rem;overflow-wrap:anywhere}
-.post-body p{margin:0 0 18px}
+.post-body p{margin:0 0 24px}
 .post-body > :last-child{margin-bottom:0}
-.post-body :is(h1,h2,h3,h4,h5,h6){font-weight:700;font-size:12px;line-height:18px;margin:2em 0 .6em}
+.post-body :is(h1,h2,h3,h4,h5,h6){font-weight:700;font-size:14px;line-height:24px;margin:2em 0 .6em}
 .post-body h1{font-size:24px;line-height:30px;font-family:var(--f-display)}
 .post-body h2{font-size:18px;line-height:24px;font-family:var(--f-display)}
 .post-body > :is(h1,h2,h3,h4,h5,h6):first-child{margin-top:0}
-.post-body :is(ul,ol){margin:0 0 18px;padding-left:1.4em}
+.post-body :is(ul,ol){margin:0 0 24px;padding-left:1.4em}
 .post-body :is(ul,ol) :is(ul,ol){margin:0}
 .post-body ul ul{list-style:circle}
-.post-body blockquote{margin:0 0 18px;padding-left:1em;border-left:2px solid var(--ink)}
+.post-body blockquote{margin:0 0 24px;padding-left:1em;border-left:2px solid var(--ink)}
 .post-body blockquote p{margin-bottom:9px}
 .post-body code{font-family:var(--f-mono);border:1px solid var(--ink);padding:0 .3em}
-.post-body pre{margin:0 0 18px;padding:12px 14px;border:1px solid var(--ink);overflow-x:auto}
+.post-body pre{margin:0 0 24px;padding:12px 14px;border:1px solid var(--ink);overflow-x:auto}
 .post-body pre code{border:0;padding:0}
 .post-body .highlight{background:none}
 .post-body hr{border:0;border-top:2px dotted var(--ink);margin:36px 0}
-.post-body img{display:block;max-width:100%;height:auto;margin:0 0 18px}
-.post-body table{border-collapse:collapse;margin:0 0 18px;display:block;overflow-x:auto;max-width:100%}
+.post-body img{display:block;max-width:100%;height:auto;margin:0 0 24px}
+.post-body table{border-collapse:collapse;margin:0 0 24px;display:block;overflow-x:auto;max-width:100%}
 .post-body :is(th,td){border:1px solid var(--ink);padding:4px 10px;text-align:left}
 .post-body th{background:var(--ink-soft)}
 
