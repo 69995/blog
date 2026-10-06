@@ -11,7 +11,7 @@
   color-scheme:light;
 }
 /* ダークモード（ページ下のスイッチで切り替え） */
-:root[data-theme="dark"]{--bg:#0b0d16; --ink:#8fa6ff; --ink-soft:#8fa6ff33; color-scheme:dark}
+:root[data-theme="dark"]{--bg:#0b0d16; --ink:#0000ff; --ink-soft:#0000ff33; color-scheme:dark}
 
 *{box-sizing:border-box}
 ::selection{background:var(--ink);color:var(--bg)}
