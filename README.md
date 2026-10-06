@@ -38,4 +38,4 @@ GitHub の画面なら、`blog` フォルダを開いて「Add file」→「Crea
 
 ## フォントについて
 
-本文のドット文字は「東雲ゴシック12」（パブリックドメイン）の JF ドットフォント版を、jsDelivr（npm パッケージ @fontpkg/jf-dot-shinonome-gothic-12）から読み込んでいます。
+本文は「BIZ UDPゴシック」を Google Fonts から読み込んでいます。見出しは読む人のパソコンのゴシック（WindowsならＭＳ Ｐゴシック）です。
