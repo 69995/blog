@@ -1,7 +1,5 @@
 # blog
 
-GitHub Pages で公開する、わたはるの日記ブログです。
-
 ## 公開URL
 
 https://69995.github.io/blog/
@@ -10,7 +8,7 @@ https://69995.github.io/blog/
 
 ## 記事を書く
 
-`nikki` フォルダの中に、日付だけの名前でファイルを作ります。
+`blog` フォルダの中に、日付だけの名前でファイルを作ります。
 
 ```
 2026-10-07.md
@@ -28,11 +26,11 @@ title: 記事のタイトル
 - 記事のURLは `/blog/261007/` になります
 - 同じ日に2つ書くときは `2026-10-07-2.md` のように末尾に何か付けてください
 
-GitHub の画面なら、`nikki` フォルダを開いて「Add file」→「Create new file」から書いて「Commit changes」を押すだけで公開されます。
+GitHub の画面なら、`blog` フォルダを開いて「Add file」→「Create new file」から書いて「Commit changes」を押すだけで公開されます。
 
 ## 記事を直す・消す
 
-`nikki` の中のファイルを開いて、鉛筆アイコンで編集、または「…」→「Delete file」。
+`blog` の中のファイルを開いて、鉛筆アイコンで編集、または「…」→「Delete file」。
 
 ## 色を変える
 
