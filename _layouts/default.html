@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>{% if page.title %}{{ page.date | date: "%y%m%d" }}-{{ page.title }} | {% endif %}{{ site.title }}</title>
 <link rel="preload" href="https://cdn.jsdelivr.net/npm/@fontpkg/jf-dot-shinonome-gothic-12@1.0.20150527/JF-Dot-Shinonome12.ttf" as="font" type="font/ttf" crossorigin>
-<link rel="stylesheet" href="{{ '/assets/style.css' | relative_url }}">
+<link rel="stylesheet" href="{{ '/assets/style.css' | relative_url }}?v={{ site.time | date: '%s' }}">
 <script>try{if(localStorage.getItem("theme")==="dark")document.documentElement.dataset.theme="dark"}catch(e){}</script>
 </head>
 <body>
