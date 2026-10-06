@@ -4,14 +4,14 @@
 
 :root{
   /* 色はここで変えられます */
-  --bg:#ffffff; --ink:#00a800; --ink-soft:#00a80033;
+  --bg:#ffffff; --ink:#0000ff; --ink-soft:#0000ff22;
   --f-display:"ＭＳ Ｐゴシック","MS PGothic","Osaka","Hiragino Kaku Gothic ProN","Meiryo",sans-serif;
   --f-body:"Shinonome12","ＭＳ Ｐゴシック","MS PGothic","Osaka",sans-serif;
   --f-mono:"Shinonome12","ＭＳ ゴシック","MS Gothic",monospace;
   color-scheme:light;
 }
 /* ダークモード（ページ下のスイッチで切り替え） */
-:root[data-theme="dark"]{--bg:#0d120d; --ink:#4fd34f; --ink-soft:#4fd34f33; color-scheme:dark}
+:root[data-theme="dark"]{--bg:#0b0d16; --ink:#8fa6ff; --ink-soft:#8fa6ff33; color-scheme:dark}
 
 *{box-sizing:border-box}
 ::selection{background:var(--ink);color:var(--bg)}
