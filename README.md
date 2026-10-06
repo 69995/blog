@@ -4,7 +4,7 @@ GitHub Pages で公開する、わたはるの日記ブログです。
 
 ## 公開URL
 
-https://niko-haruchan.github.io/blog/
+https://69995.github.io/blog/
 
 （リポジトリの「Settings」→「Pages」で、Branch を「main」「/ (root)」にして公開しています）
 
