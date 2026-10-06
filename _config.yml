@@ -1,0 +1,36 @@
+# サイト名（ブラウザのタブに出ます）
+title: blog
+
+# リポジトリ名に合わせてください。
+#   リポジトリ名が「blog」なら     baseurl: "/blog"
+#   リポジトリ名が「<ユーザー名>.github.io」なら baseurl: ""
+baseurl: "/blog"
+
+timezone: Asia/Tokyo
+lang: ja
+
+# Markdown：GitHubと同じ書き方。1回の改行もそのまま改行になります。
+markdown: kramdown
+kramdown:
+  input: GFM
+  hard_wrap: true
+
+# 10件ごとにページ送り
+plugins:
+  - jekyll-paginate
+paginate: 10
+paginate_path: "/page/:num/"
+
+# 記事のURL（例：/blog/2026/10/06/hello/）
+permalink: /:year/:month/:day/:title/
+
+exclude:
+  - README.md
+
+# 記事には自動で記事用のレイアウトを使う
+defaults:
+  - scope:
+      path: ""
+      type: posts
+    values:
+      layout: post
