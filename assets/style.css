@@ -50,7 +50,7 @@ a{color:inherit;text-underline-offset:2px}
 .post-body th{background:var(--ink-soft)}
 
 /* 投稿日時 */
-.post-time{margin:0;font-size:12px;font-variant-numeric:tabular-nums}
+.post-time{margin:0;font-size:12px;font-style:italic;font-variant-numeric:tabular-nums}
 
 /* ページ送り */
 .pager{display:flex;justify-content:space-between;align-items:baseline;gap:16px;flex-wrap:wrap}
