@@ -1,6 +1,6 @@
 # blog
 
-GitHub Pages で公開する、わたはるの日記ブログです。
+ha_watanabeのブログ
 
 ## 公開URL
 
