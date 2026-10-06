@@ -8,6 +8,7 @@
 #   それ以降    本文（Markdown）
 require "fileutils"
 require "json"
+require "time"
 
 src = File.join(__dir__, "..", "blog")
 dst = File.join(__dir__, "..", "_posts")
@@ -42,11 +43,16 @@ Dir.children(src).sort_by { |n| n.sub(/\.(md|markdown|txt)\z/, "") }.each do |na
   slug = used[ymd] == 1 ? ymd : "#{ymd}-#{used[ymd]}"
   headline = title.empty? ? ymd : "#{ymd}-#{title}"
 
+  # 投稿日時：このファイルが最初に保存されたときの時刻（GitHubの履歴から）
+  first = `git log --diff-filter=A --format=%cI -- #{path.inspect}`.split("\n").last.to_s.strip
+  posted = first.empty? ? "" : Time.iso8601(first).getlocal("+09:00").strftime("%Y.%m.%d %H:%M")
+
   front = {
     "title" => title.empty? ? ymd : title,
     "headline" => headline,
     "permalink" => "/#{slug}/",
     "source_file" => "blog/#{name}",
+    "posted" => posted,
   }
   yaml = front.map { |k, v| "#{k}: #{v.to_s.to_json}" }.join("\n")
   File.write(File.join(dst, "#{y}-#{mo}-#{d}-#{slug}.md"), "---\n#{yaml}\n---\n#{text}")
