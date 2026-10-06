@@ -44,7 +44,8 @@ a{color:inherit;text-underline-offset:2px}
 .post-body pre code{border:0;padding:0}
 .post-body .highlight{background:none}
 .post-body hr{border:0;border-top:2px dotted var(--ink);margin:36px 0}
-.post-body img{display:block;max-width:100%;height:auto;margin:0 0 24px}
+.post-body :is(img,video){display:block;max-width:100%;height:auto;margin:0 0 24px}
+.post-body video{max-height:80vh;background:#000}
 .post-body table{border-collapse:collapse;margin:0 0 24px;display:block;overflow-x:auto;max-width:100%}
 .post-body :is(th,td){border:1px solid var(--ink);padding:4px 10px;text-align:left}
 .post-body th{background:var(--ink-soft)}
