@@ -10,9 +10,8 @@
   --f-mono:"Shinonome12","ＭＳ ゴシック","MS Gothic",monospace;
   color-scheme:light;
 }
-@media (prefers-color-scheme:dark){
-  :root{--bg:#0d120d; --ink:#4fd34f; --ink-soft:#4fd34f33; color-scheme:dark}
-}
+/* ダークモード（ページ下のスイッチで切り替え） */
+:root[data-theme="dark"]{--bg:#0d120d; --ink:#4fd34f; --ink-soft:#4fd34f33; color-scheme:dark}
 
 *{box-sizing:border-box}
 ::selection{background:var(--ink);color:var(--bg)}
@@ -52,6 +51,10 @@ a{color:inherit;text-underline-offset:2px}
 .post-body table{border-collapse:collapse;margin:0 0 18px;display:block;overflow-x:auto;max-width:100%}
 .post-body :is(th,td){border:1px solid var(--ink);padding:4px 10px;text-align:left}
 .post-body th{background:var(--ink-soft)}
+
+/* フッター（ダークモード切り替え） */
+.site-foot{display:flex;gap:10px;align-items:baseline}
+.theme-toggle{appearance:none;background:none;border:0;padding:0;font:inherit;color:inherit;cursor:pointer;text-decoration:underline;text-underline-offset:2px}
 
 /* ページ送り */
 .pager{display:flex;justify-content:space-between;align-items:baseline;gap:16px;flex-wrap:wrap}
