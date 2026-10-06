@@ -1,4 +1,4 @@
-# nikki/ フォルダの日記ファイルを、Jekyll の記事（_posts）に変換するスクリプト。
+# blog/ フォルダの日記ファイルを、Jekyll の記事（_posts）に変換するスクリプト。
 # GitHub Actions のビルド中に自動で動きます。
 #
 # 日記ファイルの書き方：
@@ -9,7 +9,7 @@
 require "fileutils"
 require "json"
 
-src = File.join(__dir__, "..", "nikki")
+src = File.join(__dir__, "..", "blog")
 dst = File.join(__dir__, "..", "_posts")
 FileUtils.mkdir_p(dst)
 
@@ -46,7 +46,7 @@ Dir.children(src).sort_by { |n| n.sub(/\.(md|markdown|txt)\z/, "") }.each do |na
     "title" => title.empty? ? ymd : title,
     "headline" => headline,
     "permalink" => "/#{slug}/",
-    "source_file" => "nikki/#{name}",
+    "source_file" => "blog/#{name}",
   }
   yaml = front.map { |k, v| "#{k}: #{v.to_s.to_json}" }.join("\n")
   File.write(File.join(dst, "#{y}-#{mo}-#{d}-#{slug}.md"), "---\n#{yaml}\n---\n#{text}")
