@@ -4,7 +4,7 @@ layout: default
 <div class="stream">
   {% for post in paginator.posts %}
   <section class="post">
-    <h2 class="post-title"><a href="{{ post.url | relative_url }}">{{ post.date | date: "%y%m%d" }}-{{ post.title }}</a></h2>
+    <h2 class="post-title"><a href="{{ post.url | relative_url }}">{{ post.headline | default: post.title }}</a></h2>
     <div class="post-body">
 {{ post.content }}
     </div>
