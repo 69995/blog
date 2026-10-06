@@ -15,10 +15,10 @@ kramdown:
   input: GFM
   hard_wrap: true
 
-# 10件ごとにページ送り
+# 5件ごとにページ送り
 plugins:
   - jekyll-paginate
-paginate: 10
+paginate: 5
 paginate_path: "/page/:num/"
 
 # 記事のURL（日記は /blog/261007/ の形。blog フォルダのファイルごとに自動で決まります）
