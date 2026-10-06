@@ -25,7 +25,7 @@ jobs:
           ruby-version: "3.3"
       - name: Install Jekyll
         run: gem install --no-document jekyll jekyll-paginate kramdown-parser-gfm
-      - name: Convert nikki/ to posts
+      - name: Convert blog/ to posts
         run: ruby _scripts/nikki.rb
       - name: Build
         run: jekyll build
