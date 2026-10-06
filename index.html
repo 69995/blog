@@ -8,6 +8,7 @@ layout: default
     <div class="post-body">
 {{ post.content }}
     </div>
+    {% if post.posted != "" and post.posted %}<p class="post-time">{{ post.posted }}</p>{% endif %}
   </section>
   {% endfor %}
 
