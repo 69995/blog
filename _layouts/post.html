@@ -1,0 +1,19 @@
+---
+layout: default
+---
+<div class="stream">
+  <article class="post">
+    <h1 class="post-title">{{ page.date | date: "%y%m%d" }}-{{ page.title }}</h1>
+    <div class="post-body">
+{{ content }}
+    </div>
+  </article>
+
+  <nav class="pager" aria-label="記事送り">
+    <a href="{{ '/' | relative_url }}">← 一覧へ</a>
+    <div class="nums">
+      {% if page.previous %}<a href="{{ page.previous.url | relative_url }}">前の記事</a>{% endif %}
+      {% if page.next %}<a href="{{ page.next.url | relative_url }}">次の記事</a>{% endif %}
+    </div>
+  </nav>
+</div>
