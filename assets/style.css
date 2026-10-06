@@ -1,13 +1,12 @@
-/* 本文用ドット文字：東雲ゴシック12（パブリックドメイン）。jsDelivr から読み込み */
-@font-face{font-family:"Shinonome12";src:url("https://cdn.jsdelivr.net/npm/@fontpkg/jf-dot-shinonome-gothic-12@1.0.20150527/JF-Dot-Shinonome12.ttf") format("truetype");font-weight:400;font-display:swap}
-@font-face{font-family:"Shinonome12";src:url("https://cdn.jsdelivr.net/npm/@fontpkg/jf-dot-shinonome-gothic-12@1.0.20150527/JF-Dot-Shinonome12B.ttf") format("truetype");font-weight:700;font-display:swap}
+/* 本文：BIZ UDPゴシック（Google Fonts） */
+@import url("https://fonts.googleapis.com/css2?family=BIZ+UDPGothic:wght@400;700&family=BIZ+UDGothic&display=swap");
 
 :root{
   /* 色はここで変えられます */
   --bg:#e0e0e0; --ink:#0000ff; --ink-soft:#0000ff22;
   --f-display:"ＭＳ Ｐゴシック","MS PGothic","Osaka","Hiragino Kaku Gothic ProN","Meiryo",sans-serif;
-  --f-body:"Shinonome12","ＭＳ Ｐゴシック","MS PGothic","Osaka",sans-serif;
-  --f-mono:"Shinonome12","ＭＳ ゴシック","MS Gothic",monospace;
+  --f-body:"BIZ UDPGothic","ＭＳ Ｐゴシック","MS PGothic",sans-serif;
+  --f-mono:"BIZ UDGothic","ＭＳ ゴシック","MS Gothic",monospace;
   color-scheme:light;
 }
 
@@ -15,7 +14,7 @@
 ::selection{background:var(--ink);color:var(--bg)}
 html{-webkit-text-size-adjust:100%}
 body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--f-body);font-size:12px;line-height:18px;
-  padding-inline:clamp(16px,4vw,40px);-webkit-font-smoothing:none;font-smooth:never}
+  padding-inline:clamp(16px,4vw,40px)}
 a{color:inherit;text-underline-offset:2px}
 :focus-visible{outline:2px solid var(--ink);outline-offset:3px}
 
