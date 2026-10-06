@@ -43,8 +43,8 @@ Dir.children(src).sort_by { |n| n.sub(/\.(md|markdown|txt)\z/, "") }.each do |na
   slug = used[ymd] == 1 ? ymd : "#{ymd}-#{used[ymd]}"
   headline = title.empty? ? ymd : "#{ymd}-#{title}"
 
-  # 投稿日時：このファイルが最初に保存されたときの時刻（GitHubの履歴から）
-  first = `git log --diff-filter=A --format=%cI -- #{path.inspect}`.split("\n").last.to_s.strip
+  # 日時：このファイルが最後に保存（コミット）された時刻（GitHubの履歴から）
+  first = `git log -1 --format=%cI -- #{path.inspect}`.strip
   posted = first.empty? ? "" : Time.iso8601(first).getlocal("+09:00").strftime("%Y.%m.%d %H:%M")
 
   front = {
